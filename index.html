@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Yoklama Sistemi</title>
+</head>
+
+<body>
+	<table style="width: 100%;" border=1 class="table table-striped table-dark">
+		{% for row in range(record|length) -%}
+			<tr>
+				{% for col in range(record[0]|length) -%}
+					<td> {{ record[row][col] }} </td>
+				{% endfor %}
+			</tr>
+		{% endfor %}
+    </table>
+</body>
+</html>
